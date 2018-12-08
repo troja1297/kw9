@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kw9", "kw9\kw9.csproj", "{EFAA2F3A-E603-4E3C-8F2F-92E544A71B36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kw9", "kw9\kw9.csproj", "{EFAA2F3A-E603-4E3C-8F2F-92E544A71B36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{9C0EE3A0-8613-434A-BC51-73F2CCE9F3CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{2D357A81-F9D9-4CFE-B397-27A03A2CD472}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Additing", "Additing", "{7298C685-6E66-4922-99D4-E88697690E46}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transactions", "Transactions", "{D727D8E6-ADB7-4AC9-ACE6-E0BA9FA9A0CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9D954CCA-5199-41B7-9F80-3B70CDE59F30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +28,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D357A81-F9D9-4CFE-B397-27A03A2CD472} = {9C0EE3A0-8613-434A-BC51-73F2CCE9F3CC}
+		{7298C685-6E66-4922-99D4-E88697690E46} = {2D357A81-F9D9-4CFE-B397-27A03A2CD472}
+		{D727D8E6-ADB7-4AC9-ACE6-E0BA9FA9A0CD} = {2D357A81-F9D9-4CFE-B397-27A03A2CD472}
+		{9D954CCA-5199-41B7-9F80-3B70CDE59F30} = {2D357A81-F9D9-4CFE-B397-27A03A2CD472}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD39C97D-A98A-49C0-AB38-5D573AFE8399}

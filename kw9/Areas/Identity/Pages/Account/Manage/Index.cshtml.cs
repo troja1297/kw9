@@ -18,13 +18,16 @@ namespace kw9.Areas.Identity.Pages.Account.Manage {
     {
         private readonly UserManager<RegisterModel.ApplicationUser> _userManager;
         private readonly SignInManager<RegisterModel.ApplicationUser> _signInManager;
+        private readonly ApplicationDbContext _context;
         private readonly IEmailSender _emailSender;
 
         public IndexModel(
             UserManager<RegisterModel.ApplicationUser> userManager,
             SignInManager<RegisterModel.ApplicationUser> signInManager,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            ApplicationDbContext context)
         {
+            _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
@@ -115,6 +118,8 @@ namespace kw9.Areas.Identity.Pages.Account.Manage {
             StatusMessage = "Your profile has been updated";
             return RedirectToPage();
         }
+
+       
 
         public async Task<IActionResult> OnPostSendVerificationEmailAsync()
         {

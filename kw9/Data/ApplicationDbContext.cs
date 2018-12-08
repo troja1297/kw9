@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using static kw9.Areas.Identity.Pages.Account.RegisterModel;
+using kw9.Models;
 
 namespace kw9.Data
 {
@@ -18,5 +19,7 @@ namespace kw9.Data
         {
             base.OnModelCreating(builder);
         }
+
+        public DbSet<kw9.Models.Transactions> Transactions { get; set; }
     }
 }

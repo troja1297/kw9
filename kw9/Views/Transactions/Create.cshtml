@@ -1,0 +1,30 @@
+﻿@model kw9.Models.Transactions
+
+    @{
+        ViewData["Title"] = "Create";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>Create</h2>
+
+    <h4>Add Money</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <p>Receiver</p>
+                <input type="text" name="receiverId"/>
+                <p>Sum</p>
+                <input type="text" name="sum"/>
+                <button type="submit">Process</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
