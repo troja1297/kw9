@@ -50,8 +50,8 @@ namespace kw9
 
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.AddMvc()
-                .AddViewLocalization();// добавляем локализацию представлений
+            services.AddMvc().AddDataAnnotationsLocalization().AddViewLocalization();
+            services.AddMvc().AddViewLocalization();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
@@ -68,7 +68,7 @@ namespace kw9
                 options.LogoutPath = $"/Identity/Account/Logout";
                 options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
             });
-
+            services.AddMemoryCache();
             // using Microsoft.AspNetCore.Identity.UI.Services;
             services.AddSingleton<IEmailSender, EmailSender>();
         }

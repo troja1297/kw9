@@ -1,5 +1,7 @@
 @using kw9.Areas.Identity.Pages.Account
 @using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @inject SignInManager<RegisterModel.ApplicationUser> SignInManager
 @inject UserManager<RegisterModel.ApplicationUser> UserManager
@@ -10,26 +12,26 @@
         <ul class="nav navbar-nav navbar-right">
 
             <li>
-                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Balance: @UserManager.GetUserAsync(User).Result.Balance KGS      </a>
+                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@Localizer["balance"] @UserManager.GetUserAsync(User).Result.Balance KGS      </a>
             </li>
             <li>
-                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserAsync(User).Result.Email!</a>
-            </li>
-
-            <li>
-                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">You Identifacator: @UserManager.GetUserName(User) </a>
+                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@Localizer["hello"] @UserManager.GetUserAsync(User).Result.Email!</a>
             </li>
 
             <li>
-                <button type="submit" class="btn btn-link navbar-btn navbar-link">Logout</button>
+                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@Localizer["identificator"] @UserManager.GetUserName(User) </a>
+            </li>
+
+            <li>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link">@Localizer["logout"]</button>
             </li>
         </ul>
     </form>
 
     <ul class="nav navbar-nav">
-        <li><a asp-area="" asp-controller="Additing" asp-action="Create">Add Modey</a></li>
-        <li><a asp-area="" asp-controller="Transactions" asp-action="Create">Transaction</a></li>
-        <li><a asp-area="" asp-controller="Transactions" asp-action="Index">List</a></li>
+        <li><a asp-area="" asp-controller="Additing" asp-action="Create">@Localizer["addmoney"]</a></li>
+        <li><a asp-area="" asp-controller="Transactions" asp-action="Create">@Localizer["addtransaction"]</a></li>
+        <li><a asp-area="" asp-controller="Transactions" asp-action="Index">@Localizer["list"]</a></li>
     </ul>
 }
 else

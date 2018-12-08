@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
+    <Folder Include="Resources\Views\Additing\" />
+    <Folder Include="Resources\Views\Transactions\" />
   </ItemGroup>
 
 </Project>
